@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Man name fetcher after sign in</title>
+
+</head>
+<body>
+<script>
+    async function getAddress(){
+        const Address = await fetch("https://fakerapi.it/api/v1/addresses").then(ram);
+        
+    
+    }
+    async function ram(addr){
+        const outputPrint= await  addr.json();
+        document.getElementById("showAddr").innerHTML= JSON.stringify(outputPrint);
+    }
+    
+</script>
+    <button id="userData" onclick="getAddress()">Get Data</button>
+    <div id="showAddr">
+
+    </div>
+</body>
+</html>
